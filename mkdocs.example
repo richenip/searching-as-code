@@ -38,5 +38,5 @@ theme:
 # Page tree
 nav:
   - Home: index.md
-  - README: README.md
+  - Getting Started: getting-started.md
   - About: about.md
