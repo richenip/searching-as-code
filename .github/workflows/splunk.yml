@@ -20,4 +20,4 @@ jobs:
           USERNAME: ${{ secrets.SPLUNK_USERNAME }}
           PASSWORD: ${{ secrets.SPLUNK_PASSWORD }}
           URL: ${{ secrets.URL }}
-        run: wget <FIND RIGHT API CALL>
+        run: curl -k -u $USERNAME:$PASSWORD $URL:8089/services/saved/searches
