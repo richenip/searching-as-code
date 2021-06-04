@@ -1,0 +1,21 @@
+name: splunkcloud
+on:
+  push:
+    branches:
+      # change this to main once done with testing
+      - mainX
+jobs:
+  deploy:
+    name: Deploy to Splunk Cloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Push to Splunk Cloud
+        env:
+          USERNAME: ${{ secrets.SPLUNK_USERNAME }}
+          PASSWORD: ${{ secrets.SPLUNK_PASSWORD }}
+          URL: ${{ secrets.URL }}
+        run: wget <FIND RIGHT API CALL>
